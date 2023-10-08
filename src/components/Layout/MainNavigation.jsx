@@ -37,7 +37,6 @@ function MainNavigation() {
     <MainNavigationStyle>
       <section className="site-info">
         <Link to={PAGES.HOME}><img src={logo} className="logo" alt="logo" /></Link>
-        { !isMobile && <Link to={PAGES.ABOUT_US}><div className="menu-item">About</div></Link>}
       </section>
       <section className="user-usage">
         <img src={hamburger} className="hamburger" alt="menu-button" onClick={onHamburgerClicked} />
