@@ -24,11 +24,8 @@ function HomePage() {
   return (
     <>
       {!isMobile && <QuartSphere />}
-      <Hero />
-      <Purpose />
-      <Shared />
-      <AboutUs />
-      <Recommendations />
+      
+      
     </>
   );
 }

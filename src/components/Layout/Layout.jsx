@@ -24,7 +24,7 @@ function Layout({ children }) {
     <StyledLayout>
       <MainNavigation />
       <div className="padder">{children}</div>
-      <Footer />
+      
     </StyledLayout>
   );
 }
