@@ -41,14 +41,7 @@ function MainNavigation() {
       </section>
       <section className="user-usage">
         <img src={hamburger} className="hamburger" alt="menu-button" onClick={onHamburgerClicked} />
-        {!userName
-          ? (
-            <>
-              <Link to={PAGES.SIGN_UP}><div className="menu-item">Sign-up</div></Link>
-              <Link to={PAGES.LOGIN}><div className="login">Login</div></Link>
-            </>
-          )
-          : (
+        {
             <>
               {!isMobile && (
                 <LazyLoadImage
@@ -66,13 +59,10 @@ function MainNavigation() {
                 />
               )}
               <div>{userData.firstName ? `Welcome, ${userData.firstName}` : ''}</div>
-              <Link to={PAGES.ADDITIONAL_DETAILS}><div className="menu-item">Your Info</div></Link>
               <Link to={PAGES.DASHBOARD}><div className="menu-item">Rent Items</div></Link>
               <Link to={PAGES.UPLOAD_OFFER}><div className="menu-item">Add Item</div></Link>
-              <Link to={PAGES.MY_OFFERS}><div className="menu-item">My Items</div></Link>
-              <div className="logout" onClick={logoutHandler}>Logout</div>
             </>
-          )}
+          }
       </section>
     </MainNavigationStyle>
   );
