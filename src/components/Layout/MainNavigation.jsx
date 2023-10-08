@@ -10,7 +10,6 @@ import { PAGES } from '../../pages/consts';
 import { MainNavigationStyle } from './main-navigation-utils';
 import hamburger from '../../images/menu-hamburger.svg';
 import { updateMenuDisplay, updateLogoutState } from '../../Store/store';
-import { redirectLoggedOutUser } from '../../user-manager/logout-user';
 import { fetchUserData } from '../../network';
 
 const logo = require('../../images/fbh-logo.png');
@@ -31,8 +30,8 @@ function MainNavigation() {
     fetchUserData({ setUserData, setUserName, setImageUrl: setUserImg });
     navigate(PAGES.LOGIN, { replace: true });
   };
-  redirectLoggedOutUser();
-  console.log(userName);
+  
+  
 
   return (
     <MainNavigationStyle>
